@@ -6,7 +6,8 @@ services:
     tty: true
     stdin_open: true
     environment:
-      MYSQL ROOT PASSWORD: "root"
-      MYSQL_PASSWORD: "ThePassword" MYSQL_USER: "speuser"
-      MYSQL DATABASE: "spe"
-    network_node: bridge
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_PASSWORD: "ThePassword"
+      MYSQL_USER: "speuser"
+      MYSQL_DATABASE: "spe"
+    network_mode: bridge
