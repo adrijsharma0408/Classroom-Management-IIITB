@@ -31,7 +31,7 @@ Only Admin, Prof, SAC,TAs, Committees can login
 docker pull mysql:5.7.29
 
 ### create cms-mysql container
-docker run --name cms-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=cms_db -e MYSQL_USER=cms_user -e MYSQL_PASSWORD=cms_password -d mysql:5.7.29
+docker run --name cms-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=spe -e MYSQL_USER=speuser -e MYSQL_PASSWORD=ThePassword -d mysql:5.7.29
 
 ## Springboot ContainerSetup
 ### build cms-springboot docker image
