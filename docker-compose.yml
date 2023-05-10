@@ -5,14 +5,9 @@ services:
     container_name: cms-mysql
     tty: true
     stdin_open: true
-    volumes:
-      - mysql-volume:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "root"
       MYSQL_PASSWORD: "ThePassword"
       MYSQL_USER: "speuser"
       MYSQL_DATABASE: "spe"
     network_mode: bridge
-volumes:
-  mysql-volume:
-    external: true
