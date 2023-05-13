@@ -33,7 +33,7 @@ class RequestServiceImplTest {
         Date date = Date.valueOf("2020-05-25");//It's a MONDAY
         RequestStatus requestStatus = RequestStatus.GRANTED;
         //String userType, @NotNull String userName, @NotNull String password
-        Login requestor = new Login("professor", "shriyakabra97", "password");
+        Login requestor = new Login("professor", "adrijsharma", "password");
 
         //Login requestor, @NotNull String purpose,
         //                   @NotNull RequestStatus requestStatus, @NotNull Date classRequestDate,
@@ -65,7 +65,7 @@ class RequestServiceImplTest {
 //        Time endTime1 = Time.valueOf("03:00:00");
 //        Classroom classroom = new Classroom("A102", 50, true, 0);
 //
-//        Login requestor = new Login("professor", "shriyakabra97", "password");
+//        Login requestor = new Login("professor", "adrijsharma", "password");
 //        when(requestRepository.findAllByRequestStatus(RequestStatus.REQUESTED)).thenReturn(Stream.of(
 //                new Request(requestor, "exams", RequestStatus.REQUESTED, classRequestDate, startTime, endTime, "", classroom, true, 0, false ),
 //                new Request(requestor, "exams", RequestStatus.REQUESTED, classRequestDate, startTime1, endTime1, "", classroom, true, 0, false )
@@ -78,7 +78,7 @@ class RequestServiceImplTest {
     void saveRejectedRequest() {
         long rId =12;
         Classroom classroom = new Classroom("A102", 50, true, 0);
-        Login requestor = new Login("professor", "shriyakabra97", "password");
+        Login requestor = new Login("professor", "adrijsharma", "password");
         Date classRequestDate = Date.valueOf("2020-05-25");
         Time startTime = Time.valueOf("23:45:00");
         Time endTime = Time.valueOf("23:55:00");
@@ -97,7 +97,7 @@ class RequestServiceImplTest {
     void saveAcceptedRequest() {
         long rId =12;
         Classroom classroom = new Classroom("A102", 50, true, 0);
-        Login requestor = new Login("professor", "shriyakabra97", "password");
+        Login requestor = new Login("professor", "adrijsharma", "password");
         Date classRequestDate = Date.valueOf("2020-05-25");
         Time startTime = Time.valueOf("23:45:00");
         Time endTime = Time.valueOf("23:55:00");
@@ -121,7 +121,7 @@ class RequestServiceImplTest {
     void getByRequestId() {
         long rId = 12;
         Classroom classroom = new Classroom("A102", 50, true, 0);
-        Login requestor = new Login("professor", "shriyakabra97", "password");
+        Login requestor = new Login("professor", "adrijsharma", "password");
         Date classRequestDate = Date.valueOf("2020-05-25");
         Time startTime = Time.valueOf("23:45:00");
         Time endTime = Time.valueOf("23:55:00");

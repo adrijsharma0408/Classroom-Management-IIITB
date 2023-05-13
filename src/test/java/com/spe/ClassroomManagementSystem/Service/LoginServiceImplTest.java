@@ -17,10 +17,10 @@ class LoginServiceImplTest {
 
     @Test
     void findByUsernameAndPassword() {
-        String username = "shriyakabra97";
+        String username = "adrijsharma";
         String password = "password";
        when(loginRepository.findByUserNameAndPassword(username, password)).thenReturn(
-               new Login("professor", "shriyakabra97", "password")
+               new Login("professor", "adrijsharma", "password")
        );
        assertEquals("professor", loginService.findByUsernameAndPassword(username, password).getUserType());
     }
@@ -30,8 +30,8 @@ class LoginServiceImplTest {
     void findByLoginId() {
         long loginId = 12;
         when(loginService.findByLoginId(loginId)).thenReturn(
-                new Login("professor", "shriyakabra97", "password")
+                new Login("professor", "adrijsharma", "password")
         );
-        assertEquals("shriyakabra97", loginService.findByLoginId(loginId).getUserName());
+        assertEquals("adrijsharma", loginService.findByLoginId(loginId).getUserName());
     }
 }

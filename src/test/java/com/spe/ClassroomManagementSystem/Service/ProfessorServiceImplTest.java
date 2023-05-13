@@ -20,13 +20,13 @@ class ProfessorServiceImplTest {
 
     @Test
     void saveProfessor() {
-        Login login = new Login("professor", "shriyakabra97", "password");
-        String userName = "shriyakabra97";
+        Login login = new Login("professor", "adrijsharma", "password");
+        String userName = "adrijsharma";
         String professorName = "Shriya Kabra";
-        String professorEmail = "shriyakabra97@gmail.com";
+        String professorEmail = "adrijsharma@gmail.com";
         Professor professor = new Professor(userName, professorName, professorEmail , login);
         when(professorRepository.save(professor)).thenReturn(
-                new Professor(userName, professorName, professorEmail , new Login("professor", "shriyakabra97", "password"))
+                new Professor(userName, professorName, professorEmail , new Login("professor", "adrijsharma", "password"))
         );
         assertEquals("Saved Professor Successfully", professorService.saveProfessor(professor));
 
@@ -34,9 +34,9 @@ class ProfessorServiceImplTest {
 
     @Test
     void findByForeignId() {
-        Login login = new Login("professor", "shriyakabra97", "password");
+        Login login = new Login("professor", "adrijsharma", "password");
         when(professorRepository.findByForeignId(login)).thenReturn(
-                new Professor("shriyakabra97", "Shriya Kabra", "shriyakabra97@gmail.com" , new Login("professor", "shriyakabra97", "password"))
+                new Professor("adrijsharma", "Shriya Kabra", "adrijsharma@gmail.com" , new Login("professor", "adrijsharma", "password"))
         );
         assertEquals("Shriya Kabra",professorService.findByForeignId(login).getProfessorName());
     }

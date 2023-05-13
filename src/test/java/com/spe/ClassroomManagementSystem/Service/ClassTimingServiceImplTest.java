@@ -66,7 +66,7 @@ public class ClassTimingServiceImplTest {
         Date date = Date.valueOf("2020-06-01");//It's a MONDAY
         Time startTime = Time.valueOf("09:00:00");
         Time endTime = Time.valueOf("09:30:00");
-        Login requestor = new Login("professor", "shriyakabra97", "password");
+        Login requestor = new Login("professor", "adrijsharma", "password");
         Time startTime1 = Time.valueOf("23:45:00");
         Time endTime1 = Time.valueOf("23:55:00");
         Time startTime2 = Time.valueOf("02:30:00");
