@@ -60,8 +60,8 @@ if(session.getAttribute("admin_login")!=null){
     <footer class="page-footer font-small blue">
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">2020 Copyright:
-            <a>Students of IIIT-B</a>
+        <div class="footer-copyright text-center py-3">2023 Copyright:
+            <a>IIITB Students - Adrij Sharma and Ankit Agarwal</a>
         </div>
         <!-- Copyright -->
 

@@ -46,7 +46,7 @@
 </script>
 <nav class="navbar navbar-fixed-top navbar-light" style="background-color: #563D7C; ">
     <!-- Navbar content -->
-    <a class="navbar-brand" href="AdminDashboard.jsp">IIIT-B Clasroom Manager</a>
+    <a class="navbar-brand" href="AdminDashboard.jsp">IIIT-B Classroom Manager</a>
     <ul class="nav navbar-nav navbar-left">
         <li><a href="RegisterUser.jsp"> Add User </a></li>
         <li><a href="/getAllRequests">View Requests</a></li>
@@ -111,8 +111,8 @@
     <footer class="page-footer font-small blue">
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">2020 Copyright:
-            <a>Students of IIIT-B</a>
+        <div class="footer-copyright text-center py-3">2023 Copyright:
+            <a>IIITB Students - Adrij Sharma and Ankit Agarwal</a>
         </div>
         <!-- Copyright -->
 
