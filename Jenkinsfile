@@ -27,7 +27,7 @@ pipeline {
         
         stage('Build Pulled Code using Maven') {
             steps {
-                sh './mvnw clean install'
+                sh 'mvn clean install'
             }
         }
         
