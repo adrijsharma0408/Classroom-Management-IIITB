@@ -49,18 +49,11 @@ pipeline {
             }
         }
         
-        stage('Local Memory Cleanup') {
-            steps {
-                sh 'docker rmi adrijsharma/classroom_management_iiitb'
-            }
-        }
-        
         stage('Ensure Production DB is Running') {
             steps {
                 sh 'docker-compose -f docker-composePROD.yml down'
                 sh 'docker-compose -f docker-composeTEST.yml down'
                 sh 'docker-compose -f docker-composePROD.yml up -d'
-                // sh 'export LC_ALL=en_IN.UTF-8'
             }
         }
         
