@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    
     environment {
         registry = 'adrijsharma/classroom_management_iiitb'
         registryCredential = 'dockerhubconnect'
@@ -8,6 +9,7 @@ pipeline {
         LANG = 'en_IN.UTF-8'
         LANGUAGE = 'en_IN.UTF-8'
     }
+    
     stages {
         stage('Pull GitHub Repository') {
             steps {
@@ -28,6 +30,7 @@ pipeline {
                 sh './mvnw clean install'
             }
         }
+        
         stage('Creating Image using Docker') {
             steps {
                 script {
@@ -35,6 +38,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Pushing the Image to Docker Repository') {
             steps {
                 script {
@@ -44,11 +48,13 @@ pipeline {
                 }
             }
         }
-        stage('Cleaning Up local memory') {
+        
+        stage('Local Memory Cleanup') {
             steps {
                 sh 'docker rmi adrijsharma/classroom_management_iiitb'
             }
         }
+        
         stage('Ensure Production DB is Running') {
             steps {
                 sh 'docker-compose -f docker-composePROD.yml down'
@@ -57,7 +63,8 @@ pipeline {
                 sh 'export LC_ALL=en_IN.UTF-8'
             }
         }
-        stage('Run ansible for deployment') {
+        
+        stage('Run Ansible for Deployment') {
             steps {
                 sh 'chmod +x ./scriptCleanSH.sh'
                 sh './scriptCleanSH.sh'
