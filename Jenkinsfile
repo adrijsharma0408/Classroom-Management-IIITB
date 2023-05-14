@@ -22,6 +22,7 @@ pipeline {
                 sh 'docker-compose -f docker-composePROD.yml down'
                 sh 'docker-compose -f docker-composeTEST.yml down'
                 sh 'docker-compose -f docker-composeTEST.yml up -d' 
+                sh 'sleep 2'
             }
         }
         
