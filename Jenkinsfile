@@ -2,6 +2,8 @@ pipeline {
     agent any
     
     environment {
+    	// FIREFOX_BINARY_PATH = '/snap/bin/firefox'
+    	// GECKODRIVER_PATH = '/usr/local/bin/geckodriver'
         registry = 'adrijsharma/classroom_management_iiitb'
         registryCredential = 'dockerhubconnect'
         dockerImage = ''
@@ -28,6 +30,10 @@ pipeline {
         
         stage('Build Pulled Code using Maven') {
             steps {
+            	// script {
+                    // Update the PATH with both GECKODRIVER_PATH and FIREFOX_BINARY_PATH
+                    // env.PATH = "${env.GECKODRIVER_PATH}:${env.FIREFOX_BINARY_PATH}:${env.PATH}"
+                // }
                 sh 'mvn clean install'
             }
         }
