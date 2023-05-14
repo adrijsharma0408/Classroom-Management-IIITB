@@ -60,7 +60,7 @@ pipeline {
                 sh 'docker-compose -f docker-composePROD.yml down'
                 sh 'docker-compose -f docker-composeTEST.yml down'
                 sh 'docker-compose -f docker-composePROD.yml up -d'
-                sh 'export LC_ALL=en_IN.UTF-8'
+                // sh 'export LC_ALL=en_IN.UTF-8'
             }
         }
         
