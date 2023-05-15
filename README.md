@@ -39,3 +39,5 @@ docker build -t cms-springboot .
 
 ### create cms-springboot container from docker image
 docker run -t -p 8082:8082 --name cms-springboot --link cms-mysql:mysql -d cms-springboot
+
+chnnge1
