@@ -24,10 +24,10 @@ public class MailServiceImpl implements MailService{
     {
         SimpleMailMessage mail=new SimpleMailMessage();
         mail.setTo(email);
-        mail.setFrom("connecttopragati@gmail.com");
+        mail.setFrom("classroom.manager.iiitb.@gmail.com");
         mail.setText(text);
         mail.setSubject(subject);
         javaMailSender.send(mail);
-        logger.info("mail sent");
+        logger.info("Mail sent sucessfully");
     }
 }
