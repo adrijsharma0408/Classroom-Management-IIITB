@@ -6,13 +6,20 @@
   become: yes
   become_method: sudo
   tasks:
-          - name: Pull repo
+          - name: Pull GitHub Repository
             shell:
                     chdir: /tmp
                     cmd: git clone https://github.com/adrijsharma0408/Classroom-Management-IIITB.git
+          
+          - name: Change Directory
+            shell:
+                    chdir: /tmp/Classroom-Management-IIITB
+                    cmd: chmod +x ./scriptCleanSH.sh
             
           - name: Run the cleaning script
-            shell: ./scriptCleanSH.sh 
+            shell:
+                    chdir: /tmp/Classroom-Management-IIITB
+                    cmd: ./scriptCleanSH.sh
            
           - name: Ensure that Docker service is enabled
             service:
