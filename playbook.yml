@@ -15,6 +15,14 @@
             docker_image:
                     name: adrijsharma/classroom_management_iiitb:latest
                     source: pull
+                    
+          - name: Change permission of cleaning script
+            shell: chmod +x ./scriptCleanSH.sh
+            
+          - name: Run the cleaning script
+            shell: ./scriptCleanSH.sh      
 
           - name: Run the Container
             shell: docker run -t -p 8082:8082 --name cms-springboot --link cms-mysql:mysql -d adrijsharma/classroom_management_iiitb
+            
+        
