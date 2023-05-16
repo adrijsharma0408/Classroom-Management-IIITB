@@ -6,11 +6,11 @@
   become: yes
   become_method: sudo
   tasks:
-	  - name: Pull the GitHub repository
-            shell: git clone "https://github.com/adrijsharma0408/Classroom-Management-IIITB.git"
-            
-	  - name: Change permission of cleaning script
-            shell: chmod +x ./scriptCleanSH.sh
+          - name: Pull repo
+            shell:
+                    chdir: /tmp
+                    cmd: git clone https://github.com/adrijsharma0408/Classroom-Management-IIITB.git
+                    listdir: ls -l
             
           - name: Run the cleaning script
             shell: ./scriptCleanSH.sh 
