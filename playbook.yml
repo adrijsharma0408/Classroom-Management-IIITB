@@ -6,6 +6,11 @@
   become: yes
   become_method: sudo
   tasks:
+          - name: Clean Old Repository
+            shell:
+                    chdir: /tmp
+                    cmd: rm -rf Classroom-Management-IIITB || true
+          
           - name: Pull GitHub Repository
             shell:
                     chdir: /tmp
