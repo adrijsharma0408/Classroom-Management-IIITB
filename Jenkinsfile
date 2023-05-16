@@ -61,8 +61,6 @@ pipeline {
         
         stage('Run Ansible for Deployment') {
             steps {
-                // sh 'chmod +x ./scriptCleanSH.sh'
-                // sh './scriptCleanSH.sh'
                 ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: './inventory', playbook: 'playbook.yml'
             }
         }

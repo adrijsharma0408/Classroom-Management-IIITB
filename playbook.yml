@@ -37,6 +37,6 @@
                     source: pull      
 
           - name: Run the Container
-            shell: docker run -t -p 8082:8082 --name cms-springboot --link cms-mysql:mysql -d adrijsharma/classroom_management_iiitb
+            shell: docker run -t -p 8082:8082 --name cms-springboot --link cms-mysql:mysql -v logvolume:/var/log/tomcat -d adrijsharma/classroom_management_iiitb
             
         
